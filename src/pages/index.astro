@@ -2,17 +2,14 @@
 import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Variant } from '~/enums';
-import Image from '~/components/common/Image.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 
 const metadata = {
-  title: 'Segundo Sueldo',
+  title: 'briq.mx',
   ignoreTitleTemplate: true,
 };
 ---
@@ -46,13 +43,15 @@ const metadata = {
     }}
   >
     <Fragment slot="title">
-      <span class="block">¿Quieres ser</span>
+      <span class="block text-white">¿Quieres ser</span>
       <span class="text-sky dark:text-white highlight">nuestro socio?</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline font-bold">Preferimos que nuestra comunidad se quede con las acciones.</span>
-      <span class="hidden sm:block">
+      <span class="hidden sm:inline font-bold text-white text-base"
+        >Preferimos que nuestra comunidad se quede con las acciones.</span
+      >
+      <span class="hidden sm:block text-white text-base">
         Levantaremos una ronda de inversión en septiembre. ¿Por qué no darle la oportunidad a los inversionistas que ya
         confían en nosotros y usan briq.mx? #ElValorSeQuedaEnCasa</span
       >

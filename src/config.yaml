@@ -1,5 +1,5 @@
 site:
-  name: Segundo Sueldo
+  name: Briq.mx
   site: 'https://segundosueldo.mx/'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: Segundo Sueldo
-    template: '%s — Segundo Sueldo'
+    default: briq.mx
+    template: '%s — briq.mx'
   description: "\U0001F680 Genera riqueza de forma automatizada sin ser experto. Vive de tus inversiones."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: Segundo Sueldo
+    site_name: briq.mx
     images:
       - url: '~/assets/images/default.png'
         width: 1200
