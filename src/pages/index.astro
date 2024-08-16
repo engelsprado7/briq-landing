@@ -4,9 +4,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 import { Variant } from '~/enums';
 import HeroText from '~/components/widgets/HeroText.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import { Icon } from 'astro-icon/components';
 
 const metadata = {
   title: 'briq.mx',
@@ -95,135 +96,48 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <Hero2>
+    <Fragment slot="tagline">
+      <span class="text-white">¿POR QUÉ ELEGIMOS A</span>
+    </Fragment>
+    <Fragment slot="title">
+      <span class="text-sky block dark:text-white highlight text-5xl">playbusiness.mx</span>
+      <span class="text-2xl text-white">PARA MANEJAR LA INVERSIÓN?</span>
+    </Fragment>
+    <Fragment slot="content">
+      <section class="flex flex-col gap-6">
+        <div class="flex md:flex-row flex-col gap-6">
+          <div class="bg-white rounded-lg flex items-start justify-start flex-col gap-4 p-6">
+            <Icon name="badge-check" class="size-12 inline-block -mt-0.5 text-sky" />
+            <p class="text-start">
+              <strong>La ley impide que una plataforma pueda auto fondearse</strong> para evitar conflicto de interés. Es
+              decir, que para involucrarte y a toda la comunidad debemos usar otra plataforma.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg flex items-start justify-start flex-col gap-4 p-6">
+            <Icon name="shield-check" class="size-12 inline-block -mt-0.5 text-sky" />
+
+            <p class="text-start">
+              Conocemos a Play Business desde hace más de 8 años. <strong
+                >A nuestro parecer, tienen la experiencia, los permisos y la mejor tecnología para administrar la
+                inversión de briq.mx.</strong
+              >
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <p class="text-white max-w-xl">
+            Considera que toda la inversión se manejará a través de playbusiness.mx. Tendrás que hacer tu cuenta y los
+            procesos necesarios para que puedas convertirte en nuestro socio.
+            <strong> Iremos de la mano en este proceso entre tú, nosotros y Play Business. </strong>
+          </p>
+        </div>
+      </section>
+    </Fragment>
+  </Hero2>
+
   <!-- Content Widget **************** -->
 
-  <!-- <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Steps Widget ****************** -->
-
-  <!-- <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  /> -->
-
-  <!-- FAQs Widget ******************* -->
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: Variant.Primary,
-        text: 'Descúbrelo en 1 minuto',
-        href: 'https://segundosueldo.typeform.com/to/oswdVXHu?utm_source=segundosueldomx',
-        target: '_blank',
-      },
-    ]}
-  >
-    <Fragment slot="title"> ¡Descubre cuánto dinero puedes generar! </Fragment>
-
-    <Fragment slot="subtitle"> Configurarlo es gratis. </Fragment>
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-gray-50 dark:bg-transparent"></div>
-    </Fragment>
-  </CallToAction>
   <FAQs
     title="¿Tienes dudas?"
     tagline="FAQs"
