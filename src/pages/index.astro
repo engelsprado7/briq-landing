@@ -8,7 +8,7 @@ import { Variant } from '~/enums';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import { Icon } from 'astro-icon/components';
-
+import BriqForm from '~/components/ui/BriqForm.html';
 const metadata = {
   title: 'briq.mx',
   ignoreTitleTemplate: true,
@@ -200,4 +200,20 @@ const metadata = {
       },
     ]}
   />
+
+  <Hero2>
+    <Fragment slot="tagline">
+      <span class="text-white">¿ESTAS LISTO PARA</span>
+    </Fragment>
+    <Fragment slot="title">
+      <span class="text-white highlight text-5xl">ser socio de <strong class="text-sky">briq.mx?</strong></span>
+    </Fragment>
+    <Fragment slot="content">
+      <section class="flex justify-center gap-6">
+        <div class="flex justify-center md:flex-row flex-col gap-6 w-full">
+          <BriqForm />
+        </div>
+      </section>
+    </Fragment>
+  </Hero2>
 </Layout>
