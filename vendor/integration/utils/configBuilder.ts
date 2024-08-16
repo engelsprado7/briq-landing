@@ -172,7 +172,7 @@ const getAppBlog = (config: Config) => {
 
 const getUI = (config: Config) => {
   const _default = {
-    theme: 'system',
+    theme: 'light:only',
   };
 
   return merge({}, _default, config?.ui ?? {});
@@ -186,9 +186,9 @@ const getAnalytics = (config: Config) => {
         partytown: true,
       },
       googleTagManager: {
-        id: "GTM-KRB4WL2F",
+        id: 'GTM-KRB4WL2F',
         partytown: true,
-      }
+      },
     },
   };
 
